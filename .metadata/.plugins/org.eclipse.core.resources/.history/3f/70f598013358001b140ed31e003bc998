@@ -1,0 +1,18 @@
+package entities;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import entities.enums.WorkerLevel;
+
+public class Worker {
+	
+	// atributos
+	private String name;
+	private WorkerLevel level;
+	private Double baseSalary;
+	
+	private Department departmen;
+	List<HourContract> hc = new ArrayList<>();
+
+}

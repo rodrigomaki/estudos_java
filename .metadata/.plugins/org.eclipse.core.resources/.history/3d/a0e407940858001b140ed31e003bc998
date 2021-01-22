@@ -1,0 +1,16 @@
+package application;
+
+import entities.Employee;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		Employee e = new Employee(123, "Maria", 1000.0);
+		System.out.println(e.getSalary());
+		e.salaryIncrease(10.0);
+		System.out.println(e.getSalary());
+		
+	}
+
+}

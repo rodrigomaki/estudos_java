@@ -1,0 +1,44 @@
+package application;
+
+import java.util.List;
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.Employee;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		List<Employee> l;
+		Employee e;
+		
+		System.out.print("How many employees will be registered? ");
+		int qnt = sc.nextInt();
+		
+		for (int i = 1; i <= qnt; i++) {
+			System.out.println();
+			System.out.println("Employee #" + i + ":");
+			System.out.print("Id: ");
+			Integer id = sc.nextInt();
+			sc.nextLine();
+			System.out.print("Name: ");
+			String name = sc.nextLine();
+			System.out.print("Salary: ");
+			Double salary = sc.nextDouble();
+			
+			e = new Employee(id, name, salary);
+			
+			
+			
+		}
+		
+		
+		
+		
+		sc.close();
+	}
+
+}

@@ -1,0 +1,28 @@
+package entities;
+
+import java.util.Date;
+
+public class HourContract {
+
+	// atributos
+	private Date date;
+	private double valuePerHour;
+	private int hours;
+	
+	// construtores
+	public HourContract() {
+	}
+
+	public HourContract(Date date, double valuePerHour, int hours) {
+		this.date = date;
+		this.valuePerHour = valuePerHour;
+		this.hours = hours;
+	}
+	
+	// métodos
+	public double totalValue() {
+		return hours * valuePerHour;
+	}
+	
+	
+}

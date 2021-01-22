@@ -1,0 +1,45 @@
+package entities;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import entities.enums.WorkerLevel;
+
+public class Worker {
+	
+	// atributos
+	private String name;
+	private WorkerLevel level;
+	private Double baseSalary;
+	
+	private Department departmen;
+	List<HourContract> list_hc = new ArrayList<>();
+	
+	// construtores
+	public Worker() {
+	}
+	
+	public Worker(String name, WorkerLevel level, Double baseSalary, Department department) {
+		this.name = name;
+		this.level = level;
+		this.baseSalary = baseSalary;
+		this.departmen = department;
+	}
+	
+	// métodos
+	public void addContract(HourContract hc) {
+		list_hc.add(hc);
+	}
+	
+	public void removeContract(HourContract hc) {
+		list_hc.remove(hc);
+	}
+	
+	public Double income(Integer year, Integer month) {
+		
+		
+		
+		return 0.0;
+	}
+	
+}

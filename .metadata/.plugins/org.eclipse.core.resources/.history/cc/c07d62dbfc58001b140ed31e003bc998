@@ -1,0 +1,66 @@
+package application;
+
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
+public class ClasseDateCalendar {
+
+	public static void main(String[] args) {
+		
+		Date date = new Date();
+		System.out.println(date);
+		System.out.println("Milisegunds desde 01/01/1970: " + date.getTime());
+		System.out.println("--------------------");
+		System.out.println(date.getDate()); //depreciado - usar Calendar
+		
+		System.out.println("--------------------");
+		Calendar cal = Calendar.getInstance(); // singleton
+		System.out.println(cal); // toString do Calendar
+		// para pegar o ano de hoje
+		int ano = cal.get(Calendar.YEAR);
+		System.out.println(ano);
+		
+		// para pegar o mês de hoje
+		int mes = cal.get(Calendar.MONTH);
+		System.out.println(mes + 1);
+
+		System.out.println("--------------------");
+		cal.add(Calendar.YEAR, 16); // add 16 anos no ano atual
+		System.out.println(cal.get(Calendar.YEAR));
+		
+		System.out.println("--------------------");
+		cal.add(Calendar.YEAR, -16); // removendo 16 anos no ano atual
+		System.out.println(cal.get(Calendar.YEAR));
+		
+		// Gregorian Calendar
+		
+		System.out.println("--------------------");
+		GregorianCalendar gc = new GregorianCalendar();
+		System.out.println(gc); // toString do Gregorian Calendar
+		
+		printer(gc);
+		
+		
+		
+		
+		
+		
+		
+	}
+	
+	private static void printer(Calendar cal) {
+		int dia = cal.get(Calendar.DATE);
+		int mes = cal.get(Calendar.MONTH) + 1;
+		int ano = cal.get(Calendar.YEAR);
+		int hora = cal.get(Calendar.HOUR);
+		int minuto = cal.get(Calendar.MINUTE);
+		int segundo = cal.get(Calendar.SECOND);
+		
+		System.out.printf("Calendário: %02d/%02d/%02d %02d:%02d:%02d", dia, mes, ano, hora, minuto, segundo);
+		
+		
+		
+	}
+
+}
